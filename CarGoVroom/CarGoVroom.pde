@@ -1,19 +1,21 @@
-int[] farve = {255, 69, 21};
+int[] farve1 = {255, 69, 21};
+int[] farve2 = {0, 0, 0};
+int[] farve3 = {250, 250, 0};
 
 
-class hjul{
-  
-}
-class lygte{
-}
+
 
 bil Audi;
+
+bil Volvo;
 
 void setup(){
   size(600, 600);
 
   
-  Audi = new bil(200);
+  Audi = new bil(200, 2);
+  
+  Volvo = new bil(300, -1);
   
   
 }
@@ -23,6 +25,9 @@ void draw(){
   
   Audi.display();
   Audi.drive();
+  
+  Volvo.display();
+  Volvo.drive();
   
   
 }

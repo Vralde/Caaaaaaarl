@@ -1,29 +1,42 @@
 class bil{
-  int c;
-  float y;
   float xpos;
   float ypos;
-  float xspeed;
+  float speed;
   
-  bil(int newY){
-    y = newY;
-    fill(farve[0], farve[1], farve[2]);
+  hjul coolHjul;
+  
+  if(speed < 0){
+   lygte bagLygte;
+  }
+  
+  if(speed > 0){
+    lygte forLygte;
+  }
+  
+  bil(int newY, int xspeed){
     xpos = width/2;
-    ypos = height/2;
-    xspeed = 1;
-    
+    ypos = newY;
+    speed = xspeed;
+    coolHjul = new hjul();
+
+  
   }
   
   void display(){
+    coolHjul.display(xpos, ypos);
+    fill(farve1[0], farve1[1], farve1[2]);
     rectMode(CENTER);
-    fill(farve[0], farve[1], farve[2]);;
     rect(xpos, ypos, 20, 10);
+    
   }
   
   void drive(){
-   xpos = xpos + xspeed;
+   xpos = xpos + speed;
    if (xpos > width){
      xpos = 0;
+   }
+   if (xpos < 0){
+     xpos = width;
    }
   }
 }
