@@ -16,6 +16,7 @@ class bil{
     ypos = newY;
     speed = xspeed;
     coolHjul = new hjul();
+    forLygte = new lygte();
     farveR = farve1;
     farveG = farve2;
     farveB = farve3;
@@ -24,6 +25,7 @@ class bil{
   
   void display(){
     coolHjul.display(xpos, ypos);
+    forLygte.display(xpos, ypos, speed);
     fill(farveR, farveG, farveB);
     rectMode(CENTER);
     rect(xpos, ypos, 20, 10);

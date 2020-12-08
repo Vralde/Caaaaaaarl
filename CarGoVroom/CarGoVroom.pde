@@ -14,11 +14,11 @@ void setup(){
   
   Audi = new bil(100, 3, 255, 0, 0);
   
-  Nissan = new bil(400, 1, 150, 150, 150);
+  Nissan = new bil(425, 1, 150, 150, 150);
   
-  Volvo = new bil(200, -2, 0, 100, 255);
+  Volvo = new bil(150, -2, 0, 100, 255);
   
-  Trueno = new bil(450, 5, 255, 255, 255);
+  Trueno = new bil(400, 5, 255, 255, 255);
   
   
 }
