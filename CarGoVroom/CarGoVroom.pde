@@ -1,8 +1,3 @@
-int[] farve1 = {255, 69, 21};
-int[] farve2 = {0, 0, 0};
-int[] farve3 = {250, 250, 0};
-
-
 
 
 bil Audi;
@@ -13,9 +8,9 @@ void setup(){
   size(600, 600);
 
   
-  Audi = new bil(200, 2);
+  Audi = new bil(200, 2, 255, 0, 0);
   
-  Volvo = new bil(300, -1);
+  Volvo = new bil(300, -1, 0, 100, 255);
   
   
 }
